@@ -1,6 +1,7 @@
 <?php
+
 	gatekeeper();
-	
+
 	$user = elgg_get_page_owner_entity();
 	if(!elgg_instanceof($user, "user")){
 		$user = elgg_get_logged_in_user_entity();
@@ -15,9 +16,9 @@
 	elgg_set_context("friends");
 	
 	// fix to show collections links
-	if($user->getGUID() == elgg_get_logged_in_user_guid()){
+	/*if($user->getGUID() == elgg_get_logged_in_user_guid()){
 		collections_submenu_items();
-	}
+	} */
 	
 	// breadcrumb
 	elgg_push_breadcrumb(elgg_echo("friends"), "friends/" . $user->username);

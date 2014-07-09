@@ -13,7 +13,9 @@
 		
 		// Page handlers
 		// unregister friendsof
-		elgg_unregister_page_handler("friendsof");
+		
+    //elgg_unregister_menu_item("page", 'friends:of');
+    //elgg_unregister_page_handler("friendsof");
 		//This will let users view their friend requests
 		elgg_register_page_handler('friend_request', 'friend_request_page_handler');
 		
@@ -23,8 +25,10 @@
 		// Handle our add action event
 		elgg_register_event_handler("create", "friendrequest", "friend_request_event_create_friendrequest");
 		
+    elgg_unregister_plugin_hook_handler('register', 'menu:user_hover');
 		// Plugin hooks
 		elgg_register_plugin_hook_handler("register", "menu:user_hover", "friend_request_user_menu_handler");
+    elgg_unregister_plugin_hook_handler('register', 'menu:entity');
 		elgg_register_plugin_hook_handler("register", "menu:entity", "friend_request_entity_menu_handler");
 		
 		// Actions
@@ -105,6 +109,7 @@
 			);
 			
 			elgg_register_menu_item("page", $menu_item);
+      
 		}
 	}
 	

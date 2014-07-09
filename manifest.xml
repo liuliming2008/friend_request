@@ -5,10 +5,8 @@
 	<version>3.3</version>
 	<author>ColdTrick IT Solutions</author>
 	<website>http://www.coldtrick.com/</website>
-	<repository>https://github.com/ColdTrick/friend_request</repository>
-	<bugtracker>https://github.com/ColdTrick/friend_request/issues</bugtracker>
-	<copyright>(C) ColdTrick IT Solutions 2011 - 2013</copyright>
-	<license>GNU General Public License version 2</license>
+	<copyright>(C) ColdTrick IT Solutions 2009 - 2013</copyright>
+	<license>GNU Public License version 2</license>
 	
 	<requires>
 		<type>elgg_release</type>
